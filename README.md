@@ -1,2 +1,2 @@
 # image_processing_COMU
-hocanın işlediği haftalık konu dersleri
+<h2>hocanın işlediği haftalık konuları </h2>
