@@ -4,11 +4,11 @@
 Konuştuğumuz işlevselliği elde etmek için, Cnn görüntüyü çeşitli katmanlarla işler.
 Bu katmanları yazının bir sonraki bölümünde ayrıntılı olarak inceleyeceğiz ancak şu an sadece bu katmanlara ve 
 amaçlarına genel bir bakış yapalım:
-  - ** Convolutional Layer ** Özellikleri saptamak için kullanılır
-  - ** Non-Linearity Layer ** Sisteme doğrusal olmayanlığın (non-linearity) tanıtılması
-  - ** Pooling (Downsampling) Layer ** Ağırlık sayısını azaltır ve uygunluğu kontrol eder
-  - ** Flattening Layer ** Klasik Sinir Ağı için verileri hazırlar
-  - ** Fully-Connected Layer **  Sınıflamada kullanılan Standart Sinir Ağı
+  - **Convolutional Layer**  Özellikleri saptamak için kullanılır
+  - **Non-Linearity Layer** Sisteme doğrusal olmayanlığın (non-linearity) tanıtılması
+  - **Pooling (Downsampling) Layer** Ağırlık sayısını azaltır ve uygunluğu kontrol eder
+  - **Flattening Layer** Klasik Sinir Ağı için verileri hazırlar
+  - **Fully-Connected Layer**  Sınıflamada kullanılan Standart Sinir Ağı
   
   
   Temel olarak, Cnn, sınıflandırma sorununun çözümü için standart Sinir Ağı kullanır,
