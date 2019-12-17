@@ -36,7 +36,7 @@ Eğer resim 6×4 ve filtre 3×3 boyutunda olsaydı çıkış matrisi 4×2 boyutu
 Peki çıktı matrisi bize ne anlatıyor? Bu matrise genellikle Feature Map denir. Filtre tarafından temsil edilen özellikte görüntünün bulunduğu yeri gösterir. Kısacası, filtreyi görüntü üzerinden hareket ettirerek ve basit matris çarpımını kullanarak, özelliklerimizi tespit ediyoruz.
 Genellikle, birden çok özelliği tespit etmek için birden fazla filtre kullanlır, yani bir Cnn ağında birden fazla konvolüsyonel (Convolutional) katman bulunur. Aşağıdaki animasyona bir göz atın, burada bu işlem biraz daha görsel olarak anlatılıyor:
 
-![png](imgs/cnn4.png?raw=true)
+![png](imgs/cnn4.GIF?raw=true)
 
 ## Bir adım daha
 İlk filtreyi uyguladığımızda, bir Feature Map oluşturuyor ve bir özellik türünü tespit ediyoruz. Ardından, ikinci bir filtre kullanıp başka bir özellik türünü algılayan ikinci bir Feature Map oluştururuz.
