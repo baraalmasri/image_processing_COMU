@@ -1,5 +1,5 @@
-###image_processing_COMU
-##hocanın işlediği haftalık konuları 
+# image_processing_COMU
+### hocanın işlediği haftalık konuları 
 
 Ödev:
 
