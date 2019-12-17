@@ -1,9 +1,12 @@
+
 ## K-Means Algoritması
 ``` K-Means ``` algoritması bir unsupervised learning ve kümeleme algoritmasıdır. 
 K-Means’ teki K değeri küme sayısını belirler ve bu değeri parametre olarak alması gerekir. Bu durum aslında bir dezavantajdır.
 K değerini kendi hepsalayan X-Means adında başka bir algoritmada vardır. Algoritmanın basit bir çalışma şekli vardır.
 K değeri belirlendikten sonra algoritmada rastgele K tane merkez noktası seçer.
 Her veri ile rastgele belirlenen merkez noktaları arasındaki uzaklığı hesaplayarak veriyi en yakın merkez noktasına göre bir kümeye atar.
+
+![png](imgs/greadent descnt.png?raw=true)
 Daha sonra her küme için yeniden bir merkez noktası seçilir ve yeni merkez noktalarına göre kümeleme işlemi yapılır.
 Bu durum sistem kararlı hale gelene kadar devam eder.
 K-Means algoritmasındaki başlangıç merkez noktalarının rastgele atanması sorunlara yol açabilmektedir.
@@ -49,3 +52,4 @@ plt.scatter(v[predict==2,0],v[predict==2,1],s=50,color='green')
 plt.title('K-Means Iris Dataset')
 plt.show()
 ```
+![gif](imgs/kmeans.gif?raw=true)
