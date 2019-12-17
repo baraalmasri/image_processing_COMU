@@ -62,6 +62,8 @@ Bununla birlekte birçok kişi bu katmanı kullanmayı tercih etmez. Bunun yerin
 ## Flattening Layer
 Bu katmanın görevi basitçe, son ve en önemli katman olan Fully Connected Layer’ın girişindeki verileri hazırlamaktır. Genel olarak, sinir ağları, giriş verilerini tek boyutlu bir diziden alır. Bu sinir ağındaki veriler ise Convolutional ve Pooling katmanından gelen matrixlerin tek boyutlu diziye çevrilmiş halidir.
 
+![png](Images/img_14_1.png?raw=true)
+
 ## Fully-Connected Layer
 Bu katman ConvNet’in son ve en önemli katmanıdır. Verileri Flattening işleminden alır ve Sinir ağı yoluyla öğrenme işlemini geçekleştirir.
 Bu katman başlı başına bir derya olduğundan dolayı bu yazıdaincelenmeyecktir.
