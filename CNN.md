@@ -52,17 +52,17 @@ Tüm Convolutional katmanlarından sonra genellikle Non-Linearity(doğrusal olma
 Bu katman aktivasyon katmanı (Activation Layer) olarak adlandırılır çünkü aktivasyon fonksiyonlarından birini kullanılır. Geçmişte, sigmoid ve tahn gibi doğrusal olmayan fonksiyonlar kullanıldı, ancak Sinir Ağı eğitiminin hızı konusunda en iyi sonucu Rectifier(ReLu) fonksiyonu verdiği için artık bu fonksiyon kullanılmaya başlanmıştır.
 ReLu Fonksiyonu f (x) = max (0, x)
 ReLu fonksiyonunun Feature Map’a uygulandığında aşağıdaki gibi bir sonuç üretilir.
-![png](imgs/cnn6.png?raw=true)
+![png](imgs/cnn8 (2).png?raw=true)
 
 ## Pooling Layer
 Bu katman, CovNet’teki ardışık convolutional katmanları arasına sıklıkla eklenen bir katmandır. Bu katmanın görevi, gösterimin kayma boyutunu ve ağ içindeki parametreleri ve hesaplama sayısını azaltmak içindir. Bu sayede ağdaki uyumsuzluk kontrol edilmiş olur. Birçok Pooling işlemleri vardır, fakat en popüleri max pooling’dir. Yine aynı prensipte çalışan average pooling, ve L2-norm pooling algoritmalarıda vardır.
 Bu işlemi şekiller üzerinden açıklayarak gidelim. Öncelikle 2×2 boyutunda bir filtre oluşturalım. Bu filtreyi aşağıdaki (4×4) resim üzerinde görebilirsiniz. Resimde gördüğünüz gibi, filtre, kapsadığı alandaki en büyük sayıyı alır. Bu sayede, sinir ağının doğru karar vermesi için için yeterli bilgiyi içeren daha küçük çıktıları kullanmış olur.
-![png](imgs/cnn7.png?raw=true)
+![png](imgs/cnn9.png?raw=true)
 Bununla birlekte birçok kişi bu katmanı kullanmayı tercih etmez. Bunun yerine Convolutional katmanında daha büyük Stride (Filtreyi kaydırma işlemi) tercih edilir. Ayrıca variational autoencoders (VAEs) or generative adversarial networks (GANs) gibi daha üretken modellerde pooling katmanını tamen çıkartırlar.
 ## Flattening Layer
 Bu katmanın görevi basitçe, son ve en önemli katman olan Fully Connected Layer’ın girişindeki verileri hazırlamaktır. Genel olarak, sinir ağları, giriş verilerini tek boyutlu bir diziden alır. Bu sinir ağındaki veriler ise Convolutional ve Pooling katmanından gelen matrixlerin tek boyutlu diziye çevrilmiş halidir.
 
-![png](imgs/cnn8.png?raw=true)
+![png](imgs/cnn10.png?raw=true)
 
 ## Fully-Connected Layer
 Bu katman ConvNet’in son ve en önemli katmanıdır. Verileri Flattening işleminden alır ve Sinir ağı yoluyla öğrenme işlemini geçekleştirir.
