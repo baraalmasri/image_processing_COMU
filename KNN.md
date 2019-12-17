@@ -51,5 +51,7 @@ print(accuracy)
 
 16 + 18 + 15 + 1= 50 tane veri içinden 49 tanesini doğru tahmin edilirken 1 tanesi yanlış tahmin edilmiştir.
 Başarı oranı 49 / 50= 0,98 ‘ dir.
-##Sonuç
+
+#Sonuc
+
 Hepsi bu kadar. Bu yazıda K-NN ```( K-Nearest Neighbor)``` algoritmasının ne olduğunu ve Python dili ile nasıl kodlanabileceğini öğrendiniz.
