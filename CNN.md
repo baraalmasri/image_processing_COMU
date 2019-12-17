@@ -36,23 +36,25 @@ Eğer resim 6×4 ve filtre 3×3 boyutunda olsaydı çıkış matrisi 4×2 boyutu
 Peki çıktı matrisi bize ne anlatıyor? Bu matrise genellikle Feature Map denir. Filtre tarafından temsil edilen özellikte görüntünün bulunduğu yeri gösterir. Kısacası, filtreyi görüntü üzerinden hareket ettirerek ve basit matris çarpımını kullanarak, özelliklerimizi tespit ediyoruz.
 Genellikle, birden çok özelliği tespit etmek için birden fazla filtre kullanlır, yani bir Cnn ağında birden fazla konvolüsyonel (Convolutional) katman bulunur. Aşağıdaki animasyona bir göz atın, burada bu işlem biraz daha görsel olarak anlatılıyor:
 
-![png](imgs/cnn4.GIF?raw=true)
+![gif](imgs/cnn5.gif?raw=true)
 
 ## Bir adım daha
 İlk filtreyi uyguladığımızda, bir Feature Map oluşturuyor ve bir özellik türünü tespit ediyoruz. Ardından, ikinci bir filtre kullanıp başka bir özellik türünü algılayan ikinci bir Feature Map oluştururuz.
 Yukarıdaki örnekte görebildiğimiz gibi bu filtreler basit olabilir, ancak görüntüde bazı karmaşık özellikler çıkarmak istiyorsanız bu filtreler karmaşık hale gelebilirler. Daha karmaşık olan filtreleri görmek için aşağıdaki resme gözatabilirsiniz
 
+![png](imgs/cnn6.png?raw=true)
 Daha önce bahsettiğimiz, ancak ayrıntılı olarak açıklamadığımız bir başka şey, stride (büyük adım).
 Bu terim genellikle padding terimi ile birlikte kullanılır. Stride, filtrenin giriş görüntüsünün etrafında nasıl evrildiğinini denetler. Yukarıdaki örnekte Stride 1 piksel idi, ancak daha büyük olabilir. Bu, Feature Map’in çıktısının boyutunu etkiler.
 Cnn’nin ilk aşamalarında, ilk filtreleri uygularken, diğer Convolutional Katmanlar için mümkün olduğunca çok bilgiyi korumamız gerekir. İşte padding bu nedenden dolayı kullanılır. Feature Map’in orijinal giriş görüntüsünden daha küçük olduğunu fark etmişsinizdir. Bu nedenle Padding, (aşağıdaki resimde olduğu gibi)resmin boyutunu korumak için bu haritaya sıfır değerler katacaktır:
-![png](imgs/cnn5.png?raw=true)
+![png](imgs/cnn7.png?raw=true)
 
 ## Non-linearity
 Tüm Convolutional katmanlarından sonra genellikle Non-Linearity(doğrusal olmayan) katmanı gellir. Peki görüntüdeki doğrusallık neden bir problemdir? Sorun şu ki, tüm katmanlar doğrusal bir fonksiyon olabildiğinden dolayı Sinir Ağı tek bir perception gibi davranır, yani sonuç, çıktıların linear kombinasyonu olarak hesaplanabilir.
 Bu katman aktivasyon katmanı (Activation Layer) olarak adlandırılır çünkü aktivasyon fonksiyonlarından birini kullanılır. Geçmişte, sigmoid ve tahn gibi doğrusal olmayan fonksiyonlar kullanıldı, ancak Sinir Ağı eğitiminin hızı konusunda en iyi sonucu Rectifier(ReLu) fonksiyonu verdiği için artık bu fonksiyon kullanılmaya başlanmıştır.
 ReLu Fonksiyonu f (x) = max (0, x)
 ReLu fonksiyonunun Feature Map’a uygulandığında aşağıdaki gibi bir sonuç üretilir.
-![png](imgs/cnn8 (2).png?raw=true)
+
+![png](imgs/cnn8.png?raw=true)
 
 ## Pooling Layer
 Bu katman, CovNet’teki ardışık convolutional katmanları arasına sıklıkla eklenen bir katmandır. Bu katmanın görevi, gösterimin kayma boyutunu ve ağ içindeki parametreleri ve hesaplama sayısını azaltmak içindir. Bu sayede ağdaki uyumsuzluk kontrol edilmiş olur. Birçok Pooling işlemleri vardır, fakat en popüleri max pooling’dir. Yine aynı prensipte çalışan average pooling, ve L2-norm pooling algoritmalarıda vardır.
