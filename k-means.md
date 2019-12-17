@@ -5,8 +5,7 @@ K-Means’ teki K değeri küme sayısını belirler ve bu değeri parametre ola
 K değerini kendi hepsalayan X-Means adında başka bir algoritmada vardır. Algoritmanın basit bir çalışma şekli vardır.
 K değeri belirlendikten sonra algoritmada rastgele K tane merkez noktası seçer.
 Her veri ile rastgele belirlenen merkez noktaları arasındaki uzaklığı hesaplayarak veriyi en yakın merkez noktasına göre bir kümeye atar.
-
-![png](imgs/greadent%descnt.png?raw=true)
+ 
 Daha sonra her küme için yeniden bir merkez noktası seçilir ve yeni merkez noktalarına göre kümeleme işlemi yapılır.
 Bu durum sistem kararlı hale gelene kadar devam eder.
 K-Means algoritmasındaki başlangıç merkez noktalarının rastgele atanması sorunlara yol açabilmektedir.
