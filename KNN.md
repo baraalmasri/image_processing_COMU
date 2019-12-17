@@ -47,9 +47,9 @@ accuracy = accuracy_score(y_test, result)
 # Sonuç : 0.98
 print(accuracy)
 ```
-![png](Images/?raw=true)
+![png](Images/greadent descnt.png?raw=true)
 
 16 + 18 + 15 + 1= 50 tane veri içinden 49 tanesini doğru tahmin edilirken 1 tanesi yanlış tahmin edilmiştir.
 Başarı oranı 49 / 50= 0,98 ‘ dir.
-#Sonuç
+##Sonuç
 Hepsi bu kadar. Bu yazıda K-NN ```( K-Nearest Neighbor)``` algoritmasının ne olduğunu ve Python dili ile nasıl kodlanabileceğini öğrendiniz.
